@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 자기소개</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="TOP">
+        <h2>
+            웅성웅성
+        </h2>
+        <div>
+            <ul class="TOP-button">
+                <li><a href="#ONE">자기소개</a></li>
+                |
+                <li><a href="#TWO">취미(게임)</a></li>
+                |
+                <li><a href="#THREE">그 외</a></li>
+            </ul>
+        </div>
+        <button class="hamberger" onclick="OPEN()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+    </header>
+
+    <nav id="nav-bar">
+        <div>
+            <button onclick="OPEN()" class="nav-X">X</button>
+            <ul class="nav-button" id="nav">
+                <li><a href="#ONE">자기소개</a></li>
+                <li><a href="#TWO">취미(게임)</a></li>
+                <li><a href="#THREE">그 외</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="ONE">
+        <div class="Self">
+            <h2>자기소개</h2>
+            <p>이름: 조성웅</p>
+            <p>나이: 20살 (만 18살)</p>
+            <p>생년월일: 2005/12/09</p>
+            <p>진로: 풀스택? 개발자</p>
+        </div>
+        <div class="Photo">
+        <h2>사진</h2>
+            <img src="/imgs/me1.jpg" alt="">
+            <img src="/imgs/me2.jpg" alt="">
+            <img src="/imgs/cosplay.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="TWO">
+        <h2>취미</h2>
+        <div class="TWO-card">
+            <div class="card">
+                <h3>롤</h3>
+                <img src="/games/lol.jpg" alt="">
+            </div>
+            <div class="card">
+                <h3>발로란트</h3>
+                <img src="/games/val.jpg" alt="">
+            </div>
+            <div class="card">
+                <h3>철권</h3>
+                <img src="/games/tekken.jpg" alt="">
+            </div>
+            <div class="card">
+                <h3>원신</h3>
+                <img src="/games/genshin.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="THREE">
+        <h3>그 외</h3>
+        <div class="ect">         
+                <ul>
+                    <li>학교</li>
+                    <li>초[추자초등학교신양분교]</li>
+                    <li>중[추자중학교]</li>
+                    <li>고[제주대학교사범대학부설고등학교]</li>
+                    <li>대[한국폴리텍대학제주캠퍼스](재학중)</li>
+                </ul>
+                <ul>
+                    <li>자격증</li>
+                    <li>드론조종사1급/드론교관</li>
+                    <li>멀티미디어콘텐츠재작전문가</li>
+                    <li>운전면허1종보통</li>
+                    <li>웹디자인(필기)</li>
+                </ul>
+                <ul>
+                    <li>전화번호: 010-3088-3795</li>
+                    <br>
+                    <li>이메일: jsw13160@gmail.com</li>
+                    <br>
+                    <li>디스코드: 웅성웅#9483</li>
+                </ul>   
+            </div>
+    </section>
+
+    <a href="#TOP" class="inTOP"><button class="toTOP">↑</button></a>
+    
+
+    <script>
+        const NAV = document.getElementById("nav-bar")
+        const NAVBUTTON = document.getElementById("nav")
+        let isOpen = false
+
+        NAVBUTTON.addEventListener("click",()=>{
+            NAV.style.right = "-200px"
+            isOpen = false
+        })
+
+        const OPEN = () => {
+            isOpen = !(isOpen)
+
+            if(isOpen){
+                NAV.style.right = "0"
+            }else{
+                NAV.style.right = "-200px"
+            }
+        }
+    </script>
+</body>
+</html>
